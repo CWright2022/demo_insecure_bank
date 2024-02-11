@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <title>Super Secure Banking Login</title>
+</head>
+
+<body>
+    <h1>Super Secure Banking, Inc.</h1>
+    <h2>Please log in to your super secure account.</h2>
+    <p>I sure hope no hackers are listening...</p>
+    <p>DO NOT PUT ANY REAL SENSITIVE INFO IN THIS FORM</p>
+    <hr>
+    <form action="{{url_for("name")}}" method="post" id="message_form">
+        <label for="name_box">Username:</label><br>
+        <input type="text" id="name_box" name="name" placeholder="Username" size="28" maxlength="64" autofocus required><br><br>
+        <label for="message_box">Password:</label><br>
+        <input type="text" id="message_box" name="message" placeholder="Password" size="28" maxlength="64" required><br><br>
+        <button id="submit_button" type="submit">Login</button><br>
+
+</body>
+
+</html>
